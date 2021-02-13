@@ -1,0 +1,738 @@
+{
+	"info": {
+		"_postman_id": "5f1ccd13-308a-4533-9e29-b2b50c6965a9",
+		"name": "MovieAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/movies",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get movie from ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/movies/2",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all characters in movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/movies/1/characters",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"1",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"The Lord of the Rings: The Two Towers\",\r\n    \"year\": \"2002\",\r\n    \"image\": \"https://upload.wikimedia.org/wikipedia/en/d/d0/Lord_of_the_Rings_-_The_Two_Towers_%282002%29.jpg\",\r\n    \"trailer\": \"https://www.youtube.com/watch?v=LbfMDwc4azU\",\r\n    \"genres\": [\r\n        {\"genreId\": 3},\r\n        {\"genreId\": 4},\r\n        {\"genreId\": 7},\r\n        {\"genreId\": 8}\r\n    ],\r\n        \"characters\": [{\"characterId\": 1}, {\"characterId\":2}],\r\n    \"director\": {\"directorId\": 1},\r\n    \"franchise\": {\"franchiseId\": 1}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/movies",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n        \"movieId\": 1,\r\n        \"title\": \"The Lord of the Rings: The Return of the King\",\r\n        \"year\": \"2003\",\r\n        \"image\": \"https://upload.wikimedia.org/wikipedia/en/b/be/The_Lord_of_the_Rings_-_The_Return_of_the_King_%282003%29.jpg\",\r\n        \"trailer\": \"https://www.youtube.com/watch?v=JB7fjEtzrsk\",\r\n    \"characters\": [{\"characterId\": 1}, {\"characterId\":2}],\r\n    \"genres\": [\r\n        {\"genreId\": 3},\r\n        {\"genreId\": 4},\r\n        {\"genreId\": 7},\r\n        {\"genreId\": 8}\r\n    ],\r\n    \"director\": {\"directorId\": 1},\r\n    \"franchise\": {\"franchiseId\": 1}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/movies",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/movies/4",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all genres",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/genres",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"genres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get genre from ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/genres/4",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"genres",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post genre",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\":\"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/genres",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"genres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update genre",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"genreId\": 1,\r\n    \"type\": \"Mystery\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/genres/1",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"genres",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete genre",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/genres/9",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"genres",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all characters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/characters",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get character from ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/characters/2",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"characters",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post character",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Elijah Wood\",\r\n    \"alias\":\"Frodo Baggins\",\r\n    \"gender\":\"Male-ish\",\r\n    \"picture\":\"http://www.gstatic.com/tv/thumb/persons/19046/19046_v9_bb.jpg\",\r\n    \"movies\": [\r\n        {\"movieId\":1}\r\n        ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/characters",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update character",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"characterId\": 1,\r\n    \"name\":\"Viggo Mortensen\",\r\n    \"alias\":\"Aragorn\",\r\n    \"gender\":\"Male\",\r\n    \"picture\":\"https://upload.wikimedia.org/wikipedia/commons/d/da/Viggo_Mortensen_A_%282020%29.jpg\",\r\n    \"movies\": [\r\n        {\"movieId\":1},\r\n        {\"movieId\":2}, {\"movieId\":3}\r\n        ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/characters/1",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"characters",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete character",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/characters/2",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"characters",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all directors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/directors",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"directors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get director from ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/directors/1",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"directors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post director",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Peter Jackson\",\r\n    \"movies\": [{\"movieId\":1}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/directors",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"directors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update director",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"directorId\":1,\r\n    \"name\":\"Peter Jackson\",\r\n    \"movies\": [\r\n        {\"movieId\":1}, {\"movieId\":2}, {\"movieId\":3}\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/directors",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"directors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete director",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/directors/1",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"directors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all franchises",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/franchises",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"franchises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get franchise from ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/franchises/1",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"franchises",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all movies in franchise",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/franchises/1/movies",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"franchises",
+						"1",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all characters in franchise",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/franchises/1/characters",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"franchises",
+						"1",
+						"characters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post franchise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Lord of the Rings Trilogy\",\r\n    \"description\":\"Movies from middle earth\",\r\n    \"movies\": [{\"movieId\":1}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/franchises",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"franchises"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update franchise",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"franchiseId\":1,\r\n    \"name\": \"Lord of the Rings Trilogy\",\r\n    \"description\":\"Movies set in middle earth\",\r\n    \"movies\": [{\"movieId\":1}, {\"movieId\": 2}, {\"movieId\": 3}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/franchises/1",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"franchises",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete franchise",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://blooming-badlands-15165.herokuapp.com/api/v1/franchises/1",
+					"protocol": "https",
+					"host": [
+						"blooming-badlands-15165",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"franchises",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
